@@ -47,6 +47,8 @@ Go to the Airflow UI and then clcik on the admin button then select connection. 
 
 DAG (Directed Acyliy Graph) represents a sets of task including dependencies. Within DAG, we also define a task, task dependencies, operator, and scheduler. Let's create our DAG pipeline that extract data from API and loading to the Snowflake AI Cloud Data Warehouse.
 
+![snowflake_airflow_graph](https://github.com/znlbdn/data-egnineering-with-airflow-snowflake/blob/main/assets/airlow-graph.png)
+
 - Define the operator, python library and snowflake provider
 
 In this project, PythonOperator is used to define the task within a workflow.
@@ -183,5 +185,7 @@ create_table_task >> get_book_data >> transform >> load_to_snowflake
 This mean that the create table task will execute first then extract data from api, transorm data and load to snowflake.
 
 ![snowflake_airflow_arch](https://github.com/znlbdn/data-egnineering-with-airflow-snowflake/blob/main/assets/api-snowflake-data.png)
+
+Creating simple viz from our data within snowflake
 
 ![snowflake_airflow_viz](https://github.com/znlbdn/data-egnineering-with-airflow-snowflake/blob/main/assets/viz-airflow-snowflake.png)
