@@ -187,7 +187,6 @@ This mean that the create table task will execute first then extract data from a
 Let's transform our raw data that store in the book_table table to a view named v_book_table.
 
 ```
-SELECT * FROM book_table;
 CREATE VIEW PROJECTS_DB.PUBLIC.V_BOOK_TABLE_INFO AS
 WITH book_table AS (
 SELECT
