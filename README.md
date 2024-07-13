@@ -183,3 +183,5 @@ create_table_task >> get_book_data >> transform >> load_to_snowflake
 This mean that the create table task will execute first then extract data from api, transorm data and load to snowflake.
 
 ![snowflake_airflow_arch](https://github.com/znlbdn/data-egnineering-with-airflow-snowflake/blob/main/assets/api-snowflake-data.png)
+
+![snowflake_airflow_viz](https://github.com/znlbdn/data-egnineering-with-airflow-snowflake/blob/main/assets/viz-airflow-snowflake.png)
