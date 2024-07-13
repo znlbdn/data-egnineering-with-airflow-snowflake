@@ -10,8 +10,6 @@ Read more : https://airflow.apache.org/docs/
 
 GitHub Codespaces is a cloud-based development environment that provides instant, configurable, and on-demand development environments. Integrated directly into GitHub, it allows developers to code, build, test, and collaborate from any device.
 
-## Seting up the Github Repository
-
 To setting up the GitHub CodeSpace, you can rever this link to see the full guidlance
 
 Read more : https://github.com/znlbdn/airflow-codespace
