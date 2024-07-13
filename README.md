@@ -184,6 +184,29 @@ create_table_task >> get_book_data >> transform >> load_to_snowflake
 
 This mean that the create table task will execute first then extract data from api, transorm data and load to snowflake.
 
+Let's transform our raw data that store in the book_table table to a view named v_book_table.
+
+```
+SELECT * FROM book_table;
+CREATE VIEW PROJECTS_DB.PUBLIC.V_BOOK_TABLE_INFO AS
+WITH book_table AS (
+SELECT
+    AUTHOR,
+    TITLE,
+    SUBJECT,
+    STATUS,
+    CASE
+        WHEN borrow_availability = TRUE THEN 1
+        ELSE 0
+    END AS BORROW_AVAILABILITY,
+    PUBLISH_DATE AS YEAR_PUBLISHED
+FROM PROJECTS_DB.PUBLIC.BOOK_TABLE
+WHERE
+    BORROW_AVAILABILITY IS NOT NULL OR STATUS NOT IN (null, 'error')
+ORDER BY PUBLISH_DATE DESC)
+SELECT * FROM book_table;
+```
+
 ![snowflake_airflow_arch](https://github.com/znlbdn/data-egnineering-with-airflow-snowflake/blob/main/assets/api-snowflake-data.png)
 
 Creating simple viz from our data within snowflake
