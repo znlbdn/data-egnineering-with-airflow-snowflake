@@ -22,6 +22,7 @@ Tech in used wihtin this projects are:
 
 1. Snowflake
 2. Airflow
+3. GitHub CodeSpace
 
 ## Configure the Snowflake Database
 
