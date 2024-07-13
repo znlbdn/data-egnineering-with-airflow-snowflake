@@ -40,4 +40,4 @@ Define all the credential that use to make connection including => username, pas
 
 Go to the Airflow UI and then clcik on the admin button then select connection. Add new connection and select snowflake.
 
-![etl architecture diagram]()
+![snowflake_conn_airflow](https://github.com/znlbdn/data-egnineering-with-airflow-snowflake/blob/main/assets/snowflake-1.png)
